@@ -6,6 +6,7 @@
     --accent: #FF6C00;
     --main-backgroung: #E5E5E5;
     --dark-background: #191C26;
+    --servises-background: #111319;
     --cont-background: #F7F7F7;
     --total-white: #FFFFFF;
 
@@ -24,7 +25,20 @@ ul {
 a {
     text-decoration: none;
 }
-/*=== Header === */
+
+/*======== COMPONENTS ========*/
+.suptitle {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: calc(15/11);
+    color: var(--title-color);
+    text-transform: uppercase;
+}
+.suptitle.dark-suptitle {
+    color: var(--grey-trasp);
+    }
+
+/*======== HEADER ========*/
 .header {
     /* background-color: var(--total-white); */
     background-color: var(--grey-text);
@@ -42,16 +56,16 @@ letter-spacing: 0.1em;
 color: var(--total-white);
 cursor: pointer;
 }
-.header-link:hover,
-.header-phone:hover,
-.header-link:focus,
-.header-phone:focus  {
+.header-link:is(:hover,:focus),
+.header-phone:is(:hover,:focus)
+ {
     color: var(--accent);
 }
 .btn-dark {
+    font-family: inherit;
     font-weight: 600;
     font-size: 12px;
-    line-height: 16px;
+    line-height: calc(16/12);
     letter-spacing: 0.09em;
     color: var(--total-white);
     background: var(--grey-text);
@@ -67,7 +81,7 @@ cursor: pointer;
     border-radius: 25px;
 }
 
-/*=== Hero === */
+/*======== HERO ========*/
 .hero {
 }
 .left-side {
@@ -83,42 +97,66 @@ color: var(--title-color);
 .socials-link:focus {
     color: var(--accent);
 }
-.suptitle {
-    font-weight: 600;
-font-size: 11px;
-line-height: calc(15/11);
-color: var(--grey-trasp);
-text-transform: uppercase;
-}
+
 .hero-title {
     font-family: 'Raleway',sans-serif;
-font-weight: 700;
-font-size: 72px;
-line-height: calc(85/72);
-color: var(--total-white);
-letter-spacing: 0.05em;
+    font-size: 72px;
+    line-height: calc(85/72);
+    letter-spacing: 0.05em;
+    color: var(--total-white);
 }
 .slogan-dark {
     color: var(--grey-text);
 }
+
+/*======== ABOUT ========*/
 .about {
     background-color: var(--total-white);
 }
 .about-imgs {
 }
 .about-title {
-}
-.slogan {
+    font-family: 'Raleway',sans-serif;
+    font-size: 42px;
+    line-height: calc(49/42);
+    letter-spacing: 0.05em;
+    color: var(--title-color);
 }
 .about-text {
+    font-size: 14px;
+    line-height: calc(26/14);
+    letter-spacing: 0.02em;
 }
-.booking-btn {
+.btn-light {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(16/12);
+    letter-spacing: 0.09em;
+    color: var(--title-color);
+    background: var(--total-white);
+    border: 1px solid var(--accent);
+    border-radius: 25px;
+    text-transform: uppercase;
+    cursor: pointer;
 }
-.light {
+.btn-light:hover,
+.btn-light:focus {
+    color: var(--total-white);
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 25px;
 }
+
+/*======== SERVISES ========*/
 .services {
+    background-color: var(--servises-background);
 }
 .services-title {
+    font-family: 'Raleway',sans-serif;
+    font-size: 42px;
+    line-height: calc(49/42);
+    letter-spacing: 0.05em;
+    color: var(--total-white);
 }
 .services-list {
 }
@@ -126,12 +164,16 @@ letter-spacing: 0.05em;
 }
 .dark-btn {
 }
+
+/*======== WHY ========*/
 .why {
 }
 .why-list {
 }
 .why-title {
 }
+
+/*======== BARBERS ========*/
 .barbers {
 }
 .barbers-title {
@@ -144,14 +186,20 @@ letter-spacing: 0.05em;
 }
 .barbers-social {
 }
+
+/*======== PORTFOLIO ========*/
 .portfolio {
 }
 .portfolio-list {
 }
+
+/*======== BOOKING ========*/
 .booking {
 }
 .booking-title {
 }
+
+/*======== CONTACTTS ========*/
 .contacts {
 }
 .contacts-title {
@@ -166,8 +214,13 @@ letter-spacing: 0.05em;
 }
 .mail-link {
 }
+.suptitle.contacts-suptitle {
+    color: var(--total-white);
+}
 .suptitle-dark {
 }
+
+/*======== FOOTER ========*/
 .footer {
 }
 .copy {
