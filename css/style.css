@@ -1,6 +1,174 @@
-.list {
+:root {
+    --main-text: #555555;
+    --grey-text: #9DA4BD;
+    --title-color: #303030;
+    --grey-trasp: #9DA4BD99; 
+    --accent: #FF6C00;
+    --main-backgroung: #E5E5E5;
+    --dark-background: #191C26;
+    --cont-background: #F7F7F7;
+    --total-white: #FFFFFF;
+
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: calc(30/18);
+    letter-spacing: 0.02em;
+    color: var(--main-text);
+    background-color: var(--main-backgroung);
+}
+ul {
     list-style: none;
 }
-.link {
+a {
     text-decoration: none;
+}
+/*=== Header === */
+.header {
+    /* background-color: var(--total-white); */
+    background-color: var(--grey-text);
+}
+.logo {
+}
+.header-nav {
+}
+.header-link,
+.header-phone {
+font-weight: 600;
+font-size: 12px;
+line-height: calc(16/12);
+letter-spacing: 0.1em;
+color: var(--total-white);
+cursor: pointer;
+}
+.header-link:hover,
+.header-phone:hover,
+.header-link:focus,
+.header-phone:focus  {
+    color: var(--accent);
+}
+.btn-dark {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.09em;
+    color: var(--total-white);
+    background: var(--grey-text);
+    border: 1px solid var(--accent);
+    border-radius: 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.btn-dark:hover,
+.btn-dark:focus {
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 25px;
+}
+
+/*=== Hero === */
+.hero {
+}
+.left-side {
+}
+.socials-link {
+    font-weight: 600;
+font-size: 11px;
+line-height: calc(15/11);
+letter-spacing: 0.2em;
+color: var(--title-color);
+}
+.socials-link:hover,
+.socials-link:focus {
+    color: var(--accent);
+}
+.suptitle {
+    font-weight: 600;
+font-size: 11px;
+line-height: calc(15/11);
+color: var(--grey-trasp);
+text-transform: uppercase;
+}
+.hero-title {
+    font-family: 'Raleway',sans-serif;
+font-weight: 700;
+font-size: 72px;
+line-height: calc(85/72);
+color: var(--total-white);
+letter-spacing: 0.05em;
+}
+.slogan-dark {
+    color: var(--grey-text);
+}
+.about {
+    background-color: var(--total-white);
+}
+.about-imgs {
+}
+.about-title {
+}
+.slogan {
+}
+.about-text {
+}
+.booking-btn {
+}
+.light {
+}
+.services {
+}
+.services-title {
+}
+.services-list {
+}
+.price-list {
+}
+.dark-btn {
+}
+.why {
+}
+.why-list {
+}
+.why-title {
+}
+.barbers {
+}
+.barbers-title {
+}
+.barbers-list {
+}
+.barbers-name {
+}
+.barbers-desc {
+}
+.barbers-social {
+}
+.portfolio {
+}
+.portfolio-list {
+}
+.booking {
+}
+.booking-title {
+}
+.contacts {
+}
+.contacts-title {
+}
+.contacts-items {
+}
+.contacts-list {
+}
+.address-link {
+}
+.phone-link {
+}
+.mail-link {
+}
+.suptitle-dark {
+}
+.footer {
+}
+.copy {
 }
