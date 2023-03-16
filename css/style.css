@@ -1,227 +1,299 @@
 :root {
-    --main-text: #555555;
-    --grey-text: #9DA4BD;
-    --title-color: #303030;
-    --grey-trasp: #9DA4BD99; 
-    --accent: #FF6C00;
-    --main-backgroung: #E5E5E5;
-    --dark-background: #191C26;
-    --servises-background: #111319;
-    --cont-background: #F7F7F7;
-    --total-white: #FFFFFF;
-
+  --main-text: #555555;
+  --grey-text: #9da4bd;
+  --title-color: #303030;
+  --grey-trasp: #9da4bd99;
+  --accent: #ff6c00;
+  --main-backgroung: #e5e5e5;
+  --hero-background: #191c2633;
+  --dark-background: #191c26;
+  --prices-background: #111319;
+  --cont-background: #f7f7f7;
+  --total-white: #ffffff;
 }
+/*======== GENERAL ========*/
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    line-height: calc(30/18);
-    letter-spacing: 0.02em;
-    color: var(--main-text);
-    background-color: var(--main-backgroung);
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: var(--main-text);
+  background-color: var(--main-backgroung);
 }
 ul {
-    list-style: none;
+  list-style: none;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /*======== COMPONENTS ========*/
-.suptitle {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: calc(15/11);
-    color: var(--title-color);
-    text-transform: uppercase;
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  border: 1px solid var(--accent);
+  border-radius: 25px;
+  text-transform: uppercase;
+  cursor: pointer;
 }
-.suptitle.dark-suptitle {
-    color: var(--grey-trasp);
-    }
+
+.btn:is(:hover, :focus) {
+  color: var(--total-white);
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 25px;
+}
+.title {
+  font-family: "Raleway", sans-serif;
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+}
+.suptitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-transform: uppercase;
+}
 
 /*======== HEADER ========*/
 .header {
-    /* background-color: var(--total-white); */
-    background-color: var(--grey-text);
+  /* background-color: var(--total-white); */
+  background-color: var(--grey-text);
 }
-.logo {
-}
-.header-nav {
-}
+
 .header-link,
 .header-phone {
-font-weight: 600;
-font-size: 12px;
-line-height: calc(16/12);
-letter-spacing: 0.1em;
-color: var(--total-white);
-cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.1em;
+  color: var(--total-white);
+  cursor: pointer;
 }
-.header-link:is(:hover,:focus),
-.header-phone:is(:hover,:focus)
- {
-    color: var(--accent);
+.header-link:is(:hover, :focus),
+.header-phone:is(:hover, :focus) {
+  color: var(--accent);
 }
-.btn-dark {
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: calc(16/12);
-    letter-spacing: 0.09em;
-    color: var(--total-white);
-    background: var(--grey-text);
-    border: 1px solid var(--accent);
-    border-radius: 25px;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-.btn-dark:hover,
-.btn-dark:focus {
-    background: var(--accent);
-    border: 1px solid var(--accent);
-    border-radius: 25px;
+.header-btn {
+  color: var(--total-white);
+  background-color: var(--prices-background);
 }
 
 /*======== HERO ========*/
 .hero {
+  background-color: var(--hero-background);
 }
 .left-side {
 }
 .socials-link {
-    font-weight: 600;
-font-size: 11px;
-line-height: calc(15/11);
-letter-spacing: 0.2em;
-color: var(--title-color);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+  color: var(--title-color);
 }
-.socials-link:hover,
-.socials-link:focus {
-    color: var(--accent);
+.socials-link:is(:hover, :focus) {
+  color: var(--accent);
 }
-
+.hero-suptitle {
+  letter-spacing: normal;
+  color: var(--grey-trasp);
+}
 .hero-title {
-    font-family: 'Raleway',sans-serif;
-    font-size: 72px;
-    line-height: calc(85/72);
-    letter-spacing: 0.05em;
-    color: var(--total-white);
+  font-family: "Raleway", sans-serif;
+  font-size: 72px;
+  line-height: calc(85 / 72);
+  letter-spacing: 0.05em;
+  color: var(--total-white);
 }
-.slogan-dark {
-    color: var(--grey-text);
+.hero-slogan {
+  color: var(--grey-text);
 }
 
 /*======== ABOUT ========*/
 .about {
-    background-color: var(--total-white);
+  background-color: var(--total-white);
 }
-.about-imgs {
+.about-suptitle {
+  color: var(--title-color);
+  letter-spacing: normal;
 }
 .about-title {
-    font-family: 'Raleway',sans-serif;
-    font-size: 42px;
-    line-height: calc(49/42);
-    letter-spacing: 0.05em;
-    color: var(--title-color);
+  color: var(--title-color);
+}
+.about-slogan {
 }
 .about-text {
-    font-size: 14px;
-    line-height: calc(26/14);
-    letter-spacing: 0.02em;
+  font-size: 14px;
+  line-height: calc(26 / 14);
+  letter-spacing: 0.02em;
 }
-.btn-light {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: calc(16/12);
-    letter-spacing: 0.09em;
-    color: var(--title-color);
-    background: var(--total-white);
-    border: 1px solid var(--accent);
-    border-radius: 25px;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-.btn-light:hover,
-.btn-light:focus {
-    color: var(--total-white);
-    background: var(--accent);
-    border: 1px solid var(--accent);
-    border-radius: 25px;
+.about-btn {
+  color: var(--title-color);
+  background: var(--total-white);
 }
 
-/*======== SERVISES ========*/
-.services {
-    background-color: var(--servises-background);
+/*======== PRICES ========*/
+.prices {
+  background-color: var(--prices-background);
 }
-.services-title {
-    font-family: 'Raleway',sans-serif;
-    font-size: 42px;
-    line-height: calc(49/42);
-    letter-spacing: 0.05em;
-    color: var(--total-white);
+.prices-suptitle {
+  letter-spacing: normal;
+  color: var(--grey-trasp);
 }
-.services-list {
+.prices-title {
+  color: var(--total-white);
 }
-.price-list {
+.price-text {
+  color: var(--grey-text);
 }
-.dark-btn {
+.price-price {
+  color: var(--grey-text);
+  /* text-align: right; */
+}
+.prices-btn {
+  color: var(--total-white);
+  background-color: var(--prices-background);
 }
 
 /*======== WHY ========*/
 .why {
+  background-color: var(--total-white);
 }
-.why-list {
+.count {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(57 / 42);
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--title-color);
+}
+.count + p {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: normal;
+  /* text-align: center; */
+  color: var(--title-color);
+}
+.why-suptitle {
+  color: var(--title-color);
+  letter-spacing: normal;
 }
 .why-title {
+  color: var(--title-color);
+}
+.why-slogan {
 }
 
 /*======== BARBERS ========*/
 .barbers {
+  background-color: var(--cont-background);
+}
+.barbers-suptitle {
+  color: var(--title-color);
+  letter-spacing: normal;
 }
 .barbers-title {
-}
-.barbers-list {
+  color: var(--title-color);
 }
 .barbers-name {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  /* text-align: center; */
+  color: var(--title-color);
 }
 .barbers-desc {
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  /* text-align: center; */
+  letter-spacing: 0.02em;
+  color: var(--accent);
 }
 .barbers-social {
 }
 
 /*======== PORTFOLIO ========*/
 .portfolio {
+  background-color: var(--total-white);
 }
-.portfolio-list {
+.portfolio-suptitle {
+  color: var(--title-color);
+  letter-spacing: normal;
 }
 
 /*======== BOOKING ========*/
 .booking {
+  background-color: var(--dark-background);
 }
 .booking-title {
+  color: var(--total-white);
+}
+.booking-btn {
+  color: var(--total-white);
+  background-color: var(--prices-background);
 }
 
 /*======== CONTACTTS ========*/
 .contacts {
+  background-color: var(--dark-background);
 }
 .contacts-title {
+  color: var(--total-white);
 }
 .contacts-items {
 }
 .contacts-list {
 }
 .address-link {
+  font-weight: 700;
+  color: var(--grey-text);
+  font-style: normal;
 }
 .phone-link {
+  color: var(--grey-text);
+  font-style: normal;
 }
 .mail-link {
+  text-decoration: underline;
+  color: var(--grey-text);
+  font-style: normal;
 }
-.suptitle.contacts-suptitle {
-    color: var(--total-white);
+.contacts-suptitle {
+  color: var(--total-white);
 }
-.suptitle-dark {
+.schedule {
+  color: var(--grey-text);
 }
 
 /*======== FOOTER ========*/
 .footer {
+  background-color: var(--cont-background);
 }
 .copy {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+  color: var(--grey-text);
+}
+.footer-link {
+    
 }
