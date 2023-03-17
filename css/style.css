@@ -70,6 +70,16 @@ a {
   line-height: calc(15 / 11);
   text-transform: uppercase;
 }
+.social-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+  color: var(--title-color);
+}
+.social-link:is(:hover, :focus) {
+  color: var(--accent);
+}
 
 /*======== HEADER ========*/
 .header {
@@ -94,23 +104,16 @@ a {
   color: var(--total-white);
   background-color: var(--prices-background);
 }
+.left-side {
+}
+.header-social {
+}
 
 /*======== HERO ========*/
 .hero {
   background-color: var(--hero-background);
 }
-.left-side {
-}
-.socials-link {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: calc(15 / 11);
-  letter-spacing: 0.2em;
-  color: var(--title-color);
-}
-.socials-link:is(:hover, :focus) {
-  color: var(--accent);
-}
+
 .hero-suptitle {
   letter-spacing: normal;
   color: var(--grey-trasp);
@@ -229,6 +232,8 @@ a {
 }
 .barbers-social {
 }
+.social-item {
+}
 
 /*======== PORTFOLIO ========*/
 .portfolio {
@@ -251,7 +256,7 @@ a {
   background-color: var(--prices-background);
 }
 
-/*======== CONTACTTS ========*/
+/*======== CONTACTS ========*/
 .contacts {
   background-color: var(--dark-background);
 }
@@ -276,6 +281,10 @@ a {
   color: var(--grey-text);
   font-style: normal;
 }
+.contact-link:is(:hover, :focus) {
+  color: var(--accent);
+}
+
 .contacts-suptitle {
   color: var(--total-white);
 }
@@ -295,5 +304,4 @@ a {
   color: var(--grey-text);
 }
 .footer-link {
-    
 }
