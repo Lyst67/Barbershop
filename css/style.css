@@ -18,13 +18,25 @@ body {
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
   color: var(--main-text);
-  background-color: var(--main-backgroung);
+}
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
 }
 ul {
+  margin: 0;
+  padding-left: 0;
   list-style: none;
 }
 a {
+  display: block;
   text-decoration: none;
+}
+img {
+  display: block;
 }
 .visually-hidden {
   position: absolute;
@@ -40,14 +52,29 @@ a {
 }
 
 /*======== COMPONENTS ========*/
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid crimson;
+}
 .btn {
+  display: block;
+  min-width: 160px;
+  height: 40px;
+  border: 1px solid var(--accent);
+  border-radius: 25px;
+  background: none;
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
   line-height: calc(16 / 12);
   letter-spacing: 0.09em;
-  border: 1px solid var(--accent);
-  border-radius: 25px;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -70,6 +97,7 @@ a {
   line-height: calc(15 / 11);
   text-transform: uppercase;
 }
+
 .social-link {
   font-weight: 600;
   font-size: 11px;
@@ -82,43 +110,71 @@ a {
 }
 
 /*======== HEADER ========*/
+
 .header {
-  /* background-color: var(--total-white); */
-  background-color: var(--grey-text);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: var(--total-white); 
+  background-color: var(--grey-text);  
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  margin-right: 130px;
+}
+.nav-list {
+  display: flex;
+  gap: 30px;
+  
+}
+.header-phone {
+  margin-left: auto;
+  margin-right: 44px;
+}
+.header-btn {
+  color: var(--total-white);
+  
 }
 
-.header-link,
-.header-phone {
+.header-link {
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-weight: 600;
   font-size: 12px;
   line-height: calc(16 / 12);
   letter-spacing: 0.1em;
   color: var(--total-white);
-  cursor: pointer;
 }
-.header-link:is(:hover, :focus),
-.header-phone:is(:hover, :focus) {
+.header-link:is(:hover, :focus)  {
   color: var(--accent);
-}
-.header-btn {
-  color: var(--total-white);
-  background-color: var(--prices-background);
-}
-.left-side {
-}
-.header-social {
 }
 
 /*======== HERO ========*/
 .hero {
-  background-color: var(--hero-background);
 }
-
+.hero-container {
+  display: flex;
+  
+}
+.left-side {
+  width: 100px;
+}
+.hero-social {
+}
+.hero-content {
+  padding: 272px 100px 208px;
+  background-color: var(--hero-background);
+  flex-grow: 1;
+}
 .hero-suptitle {
+  margin-bottom: 20px;
   letter-spacing: normal;
   color: var(--grey-trasp);
 }
 .hero-title {
+  margin-bottom: 20px;
   font-family: "Raleway", sans-serif;
   font-size: 72px;
   line-height: calc(85 / 72);
@@ -126,6 +182,7 @@ a {
   color: var(--total-white);
 }
 .hero-slogan {
+  max-width: 360px;
   color: var(--grey-text);
 }
 
@@ -133,23 +190,38 @@ a {
 .about {
   background-color: var(--total-white);
 }
+.about-container {
+  display: flex;
+}
+.about-imgs {
+  display: flex;
+  gap: 30px;
+}
+.about-content {
+  padding-left: 30px;
+  padding-right: 100px;
+}
 .about-suptitle {
+  margin-bottom: 20px;
   color: var(--title-color);
   letter-spacing: normal;
 }
 .about-title {
+  margin-bottom: 20px;
   color: var(--title-color);
 }
 .about-slogan {
+  margin-bottom: 20px;
 }
 .about-text {
+  margin-bottom: 42px;
   font-size: 14px;
   line-height: calc(26 / 14);
   letter-spacing: 0.02em;
 }
 .about-btn {
   color: var(--title-color);
-  background: var(--total-white);
+  background: none;
 }
 
 /*======== PRICES ========*/
@@ -157,27 +229,50 @@ a {
   background-color: var(--prices-background);
 }
 .prices-suptitle {
+  margin-bottom: 20px;
   letter-spacing: normal;
   color: var(--grey-trasp);
 }
 .prices-title {
+  margin-bottom: 44px;
   color: var(--total-white);
+}
+.services-prices {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 44px;
+}
+.price-list {
+  width: calc((100% - 30px) / 2);
+  padding: 30px 20px;
+  outline: 1px solid white;
+}
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.price-item:last-child {
+  margin-bottom: 0;
 }
 .price-text {
   color: var(--grey-text);
 }
 .price-price {
-  color: var(--grey-text);
-  /* text-align: right; */
+  color: var(--grey-text); 
 }
 .prices-btn {
+  margin: 0 auto;
   color: var(--total-white);
-  background-color: var(--prices-background);
+  background: none;
 }
 
 /*======== WHY ========*/
 .why {
   background-color: var(--total-white);
+}
+.why-container {
+  display: flex;
 }
 .count {
   font-weight: 700;
@@ -196,13 +291,17 @@ a {
   color: var(--title-color);
 }
 .why-suptitle {
+  margin-bottom: 20px;
   color: var(--title-color);
   letter-spacing: normal;
 }
 .why-title {
+  max-width: 430px;
+  margin-bottom: 20px;
   color: var(--title-color);
 }
 .why-slogan {
+  max-width: 500px;
 }
 
 /*======== BARBERS ========*/
@@ -210,23 +309,34 @@ a {
   background-color: var(--cont-background);
 }
 .barbers-suptitle {
+  margin-bottom: 20px;
   color: var(--title-color);
   letter-spacing: normal;
 }
 .barbers-title {
+  margin-bottom: 44px;
   color: var(--title-color);
 }
+.barbers-list {
+  display: flex;
+  gap: 30px;
+}
+.barbers-item {
+  flex-basis: calc((100% - 60px) / 3);
+}
 .barbers-name {
+  margin-bottom: 8px;
   font-weight: 400;
   font-size: 18px;
   line-height: calc(25 / 18);
-  /* text-align: center; */
+  text-align: center; 
   color: var(--title-color);
 }
 .barbers-desc {
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: calc(19 / 14);
-  /* text-align: center; */
+  text-align: center; 
   letter-spacing: 0.02em;
   color: var(--accent);
 }
@@ -240,52 +350,67 @@ a {
   background-color: var(--total-white);
 }
 .portfolio-suptitle {
+  margin-bottom: 44px;
   color: var(--title-color);
   letter-spacing: normal;
+}
+.portfolio-list {
+  display: flex;
+  gap: 30px;
+}
+.portfolio-list li {
+  width: calc((100% - 90px) / 4);
 }
 
 /*======== BOOKING ========*/
 .booking {
+  padding-top: 130px;
+  padding-bottom: 184px;
   background-color: var(--dark-background);
 }
 .booking-title {
+  margin-bottom: 44px;
   color: var(--total-white);
 }
 .booking-btn {
   color: var(--total-white);
-  background-color: var(--prices-background);
+  background: none;
 }
 
 /*======== CONTACTS ========*/
 .contacts {
+  padding-top: 130px;
+  padding-bottom: 120px;
   background-color: var(--dark-background);
 }
 .contacts-title {
+  margin-bottom: 40px;
   color: var(--total-white);
 }
-.contacts-items {
+.contacts-address {
+  font-style: normal;
 }
 .contacts-list {
 }
 .address-link {
+  margin-bottom: 20px;
   font-weight: 700;
   color: var(--grey-text);
-  font-style: normal;
 }
 .phone-link {
+  margin-bottom: 20px;
   color: var(--grey-text);
-  font-style: normal;
 }
 .mail-link {
   text-decoration: underline;
   color: var(--grey-text);
-  font-style: normal;
 }
 .contact-link:is(:hover, :focus) {
   color: var(--accent);
 }
 
 .contacts-suptitle {
+  margin-bottom: 20px;
   color: var(--total-white);
 }
 .schedule {
@@ -294,6 +419,8 @@ a {
 
 /*======== FOOTER ========*/
 .footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
   background-color: var(--cont-background);
 }
 .copy {
