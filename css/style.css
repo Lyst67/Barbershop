@@ -135,6 +135,10 @@ img {
 .logo {
   margin-right: 130px;
 }
+.logo-icon {
+  display: block;
+  fill: var(--title-color);
+}
 .nav-list {
   display: flex;
   gap: 30px;
@@ -478,6 +482,11 @@ img {
   padding-top: 130px;
   padding-bottom: 120px;
   background-color: var(--dark-background);
+  background-image: url(../images/contacts-bg.png);
+  /* max-width: 785px; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .contacts-title {
   margin-bottom: 40px;
@@ -515,16 +524,33 @@ img {
 
 /*======== FOOTER ========*/
 .footer {
-  padding-top: 56px;
-  padding-bottom: 56px;
   background-color: var(--cont-background);
 }
+.footer-container {
+  display: flex;
+  align-items: center;
+}
 .copy {
+  margin-right: auto;
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
   letter-spacing: 0.2em;
   color: var(--grey-text);
 }
-.footer-link {
+.footer-social {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+} 
+.footer-social::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
 }
+.footer-link {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+ 
