@@ -80,13 +80,12 @@ img {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
+  transition: color 300ms linear, background-color 300ms linear;
 }
 
 .btn:is(:hover, :focus) {
   color: var(--total-white);
-  background: var(--accent);
-  border: 1px solid var(--accent);
-  border-radius: 25px;
+  background-color: var(--accent);
 }
 .title {
   font-family: "Raleway", sans-serif;
@@ -115,6 +114,7 @@ img {
   line-height: calc(15 / 11);
   letter-spacing: 0.2em;
   color: var(--title-color);
+  transition: color 300ms linear;
 }
 .social-link:is(:hover, :focus) {
   color: var(--accent);
@@ -123,10 +123,9 @@ img {
 /*======== HEADER ========*/
 
 .header {
+  position: absolute;
+  width: 100%;
   padding-top: 32px;
-  padding-bottom: 32px;
-  background-color: var(--total-white);
-  background-color: var(--grey-text);
 }
 .header-container {
   display: flex;
@@ -159,6 +158,7 @@ img {
   line-height: calc(16 / 12);
   letter-spacing: 0.1em;
   color: var(--total-white);
+  transition: color 300ms linear;
 }
 .header-link:is(:hover, :focus) {
   color: var(--accent);
@@ -172,6 +172,23 @@ img {
 }
 .left-side {
   width: 100px;
+  display: flex;
+  align-items: flex-end;
+}
+.hero-socials {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+  transform: rotate(0.75turn);
+  transform-origin: left;
+  margin-left: 27px;
+  align-items: center;
+}
+.hero-socials::before {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: currentColor;
 }
 .hero-social {
 }
@@ -440,6 +457,7 @@ img {
   width: 20px;
   height: 20px;
   fill: var(--title-color);
+  transition: fill 300ms linear;
 }
 .social-item:is(:hover, :focus) > .social-icon {
   fill: var(--accent);
@@ -495,8 +513,6 @@ img {
 .contacts-address {
   font-style: normal;
 }
-.contacts-list {
-}
 .address-link {
   margin-bottom: 20px;
   font-weight: 700;
@@ -509,6 +525,9 @@ img {
 .mail-link {
   text-decoration: underline;
   color: var(--grey-text);
+}
+.contact-link {
+  transition: color 300ms linear;
 }
 .contact-link:is(:hover, :focus) {
   color: var(--accent);
@@ -542,9 +561,9 @@ img {
   display: flex;
   gap: 40px;
   align-items: center;
-} 
+}
 .footer-social::before {
-  content: '';
+  content: "";
   width: 60px;
   height: 1px;
   background-color: currentColor;
@@ -553,4 +572,3 @@ img {
   padding-top: 56px;
   padding-bottom: 56px;
 }
- 
