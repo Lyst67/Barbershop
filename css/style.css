@@ -53,8 +53,6 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-/*======== COMPONENTS ========*/
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
