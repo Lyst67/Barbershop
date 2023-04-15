@@ -11,7 +11,7 @@
   --cont-background: #f7f7f7;
   --total-white: #ffffff;
   --grey-transparency: #9da4bd1f;
-
+  --backdrop-backgroung: rgba(23, 26, 36, 0.432);
   --bg-gradient: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2));
 }
 /*======== GENERAL ========*/
@@ -163,8 +163,7 @@ img {
 }
 
 /*======== HERO ========*/
-.hero {
-}
+
 .hero-container {
   display: flex;
 }
@@ -187,8 +186,6 @@ img {
   width: 50px;
   height: 1px;
   background-color: currentColor;
-}
-.hero-social {
 }
 .hero-content {
   padding: 272px 100px 208px 100px;
@@ -477,12 +474,27 @@ img {
 .portfolio-list li {
   width: calc((100% - 90px) / 4);
 }
+/*======== ONLINE-CONTACT ========*/
+
+.online-contact {
+  background-color: var(--dark-background);
+  max-width: 1600px;
+  margin: 0 auto;
+  background-image: url(../images/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: calc(50% - 15px);
+}
+.online-contact > .container {
+  display: flex;
+}
 
 /*======== BOOKING ========*/
 .booking {
   padding-top: 130px;
-  padding-bottom: 184px;
-  background-color: var(--dark-background);
+  padding-bottom: 183px;
+  width: calc(50% + 15px);
+  padding-right: 25px;
 }
 .booking-title {
   margin-bottom: 44px;
@@ -495,14 +507,10 @@ img {
 
 /*======== CONTACTS ========*/
 .contacts {
+  width: calc(50% - 15px);
   padding-top: 130px;
   padding-bottom: 120px;
-  background-color: var(--dark-background);
-  background-image: url(../images/contacts-bg.png);
-  /* max-width: 785px; */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  padding-left: 105px;
 }
 .contacts-title {
   margin-bottom: 40px;
@@ -569,4 +577,137 @@ img {
 .footer-link {
   padding-top: 56px;
   padding-bottom: 56px;
+}
+
+/*======== MODAL ========*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--backdrop-backgroung);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.modal-close-btn {
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-weight: 600;
+  color: var(--main-text);
+  margin-left: auto;
+  border-radius: 50%;
+  border: 1px solid var(--grey-text);
+  background-color: transparent;
+  transition: color 300ms linear, background-color 300ms linear;
+}
+.modal-close-btn:is(:hover, :focus) {
+  color: var(--total-white);
+  background-color: var(--accent);
+}
+.modal-title {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8px;
+  color: var(--main-text);
+}
+.modal-label {
+  position: relative;
+  display: block;
+  margin-bottom: 8px;
+}
+.label-text {
+  display: block;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  margin-bottom: 4px;
+  color: var(--main-text);
+}
+.modal-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding-left: 30px;
+  font-size: 14px;
+  color: var(--main-text);
+  outline: transparent;
+  border-radius: 4px;
+  border: 1px solid var(--grey-text);
+  transition: border-color 300ms linear;
+}
+.input-icon {
+  position: absolute;
+  left: 8px;
+  bottom: 11px;
+  transition: fill 300ms linear;
+}
+.modal-input:focus,
+.modal-input:focus + .input-icon {
+  border-color: var(--accent);
+  fill: var(--accent);
+}
+.comment-label {
+  display: block;
+  margin-bottom: 16px;
+}
+.modal-comment {
+  display: block;
+  width: 100%;
+  height: 100px;
+  padding: 8px;
+  font-size: 14px;
+  outline: transparent;
+  border-radius: 4px;
+  border: 1px solid var(--grey-text);
+  color: var(--main-text);
+  resize: none;
+  transition: border-color 300ms linear;
+}
+.modal-comment:focus {
+  border-color: var(--accent);
+}
+
+.checbox-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 48px;
+  font-size: 12px;
+}
+.checkbox-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 30px;
+}
+.checkbox-icon {
+  border: 2px solid var(--grey-text);
+  border-radius: 4px;
+  transform: translateY(5px) translateX(-6px);
+  fill: transparent;
+  transition: fill 300ms linear, background-color 300ms linear,
+    border-color 300ms linear;
+}
+.checkbox-input:checked + .checkbox-icon {
+  fill: var(--total-white);
+  background-color: var(--accent);
+  border-color: transparent;
+}
+.submit-btn {
+  margin-left: auto;
+  margin-right: auto;
 }
