@@ -19,6 +19,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
   <body>
     <header class="header">
@@ -50,8 +51,67 @@
         <button class="header-btn btn" data-modal-open type="button">
           Online-booking
         </button>
+
+        <button class="menu-open-btn" type="button" data-menu-open>
+          <svg class="burger-icon">
+            <use href="./images/symbol-sprite.svg#burger-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu-backdrop is-hidden" data-menu>
+        <div class="mobil-menu">
+          <button class="menu-close-btn" type="button" data-menu-close>
+            <svg class="menu-close-icon">
+              <use href="./images/symbol-sprite.svg#modal-menu-close"></use>
+            </svg>
+          </button>
+          <nav class="menu-nav">
+            <ul class="mrnu-nav-list">
+              <li class="menu-nav-item">
+                <a class="menu-nav-link menu-link" href="#">About</a>
+              </li>
+              <li class="menu-nav-item">
+                <a class="menu-nav-link menu-link" href="#">Services and prices</a>
+              </li>
+              <li class="menu-nav-item">
+                <a class="menu-nav-link menu-link" href="#">Barbers</a>
+              </li>
+              <li class="menu-nav-item">
+                <a class="menu-nav-link menu-link" href="#">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+
+            <a class="mob-menu-phone menu-link" href="tel:+380441111111"
+            >+38 044 111 11 11</a
+          >
+          <button class="mob-menu-btn btn" type="button">
+            Online-booking
+          </button>
+           
+           <ul class="modal-menu-socials">
+              <li class="menu-social-item">
+                <a
+                  class="modal-menu-social"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="menu-social-item">
+                <a
+                  class="modal-menu-social"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Youtube</a
+                >
+              </li> 
+        </div>
       </div>
     </header>
+
     <main>
       <section class="hero">
         <div class="container hero-container">
@@ -534,6 +594,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
