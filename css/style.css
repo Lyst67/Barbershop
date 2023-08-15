@@ -18,9 +18,9 @@
 /*======== GENERAL ========*/
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  /* font-size: 18px;
   line-height: calc(30 / 18);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02em; */
   color: var(--main-text);
 }
 p,
@@ -55,13 +55,17 @@ img {
   overflow: hidden;
 }
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
+  padding-top: 84px;
+  padding-bottom: 84px;
 }
 .container {
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+  /* padding-left: 15px;
+  padding-right: 15px; */
+  padding-left: 30px;
+  padding-right: 30px;
   margin: 0 auto;
   outline: 2px solid crimson;
 }
@@ -76,7 +80,7 @@ img {
   font-weight: 600;
   font-size: 12px;
   line-height: calc(16 / 12);
-  letter-spacing: 0.09em;
+  letter-spacing: 1.08px;
   text-transform: uppercase;
   cursor: pointer;
   transition: color 300ms linear, background-color 300ms linear;
@@ -88,9 +92,9 @@ img {
 }
 .title {
   font-family: "Raleway", sans-serif;
-  font-size: 42px;
+  /* font-size: 42px;
   line-height: calc(49 / 42);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.05em; */
 }
 .suptitle {
   font-weight: 600;
@@ -137,7 +141,7 @@ img {
 }
 .logo-icon {
   display: block;
-  fill: var(--title-color);
+  fill: var(--total-white);
 }
 .header-nav,
 .header-phone,
@@ -297,17 +301,26 @@ img {
 
 /*======== HERO ========*/
 
+.hero {
+  max-width: 480px;
+  background-image: var(--bg-gradient), url(../images/mobil-slider-img\ 3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* flex-grow: 1; */
+}
 .hero-container {
   display: flex;
 }
 .left-side {
-  width: 100px;
+  /* width: 100px;
   display: flex;
   align-items: flex-end;
   padding-left: 27px;
-  padding-bottom: 40px;
+  padding-bottom: 40px; */
+  display: none;
 }
-.hero-socials {
+/* .hero-socials {
   display: flex;
   gap: 40px;
   align-items: center;
@@ -319,31 +332,31 @@ img {
   width: 50px;
   height: 1px;
   background-color: currentColor;
-}
+} */
 .hero-content {
-  padding: 272px 100px 208px 100px;
-  background-color: var(--hero-background);
-  background-image: var(--bg-gradient), url(../images/slider-img3.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  flex-grow: 1;
+  /* padding: 272px 100px 208px 100px; */
+  margin: 208px 98px 208px 0;
 }
 .hero-suptitle {
   margin-bottom: 20px;
-  letter-spacing: normal;
   color: var(--grey-trasp);
 }
 .hero-title {
   margin-bottom: 20px;
   font-family: "Raleway", sans-serif;
-  font-size: 72px;
-  line-height: calc(85 / 72);
-  letter-spacing: 0.05em;
+  /* font-size: 72px; */
+  font-size: 40px;
+  /* line-height: calc(85 / 72); */
+  line-height: calc(56 / 40);
+  letter-spacing: 2.4px;
   color: var(--total-white);
 }
 .hero-slogan {
-  max-width: 360px;
+  /* max-width: 360px; */
+  min-width: 320px;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  letter-spacing: 0.32px;
   color: var(--grey-text);
 }
 
@@ -355,12 +368,12 @@ img {
   display: flex;
 }
 .about-imgs {
-  display: flex;
+  display: none;
   gap: 30px;
 }
 .about-content {
-  padding-left: 30px;
-  padding-right: 100px;
+  /* padding-left: 30px;
+  padding-right: 100px; */
 }
 .about-suptitle {
   margin-bottom: 20px;
@@ -368,17 +381,23 @@ img {
   letter-spacing: normal;
 }
 .about-title {
+  font-size: 28px;
+  letter-spacing: 1.4px;
+  width: 308px;
   margin-bottom: 20px;
   color: var(--title-color);
 }
 .about-slogan {
+  line-height: calc(26 / 16);
+  letter-spacing: 0.32px;
   margin-bottom: 20px;
 }
 .about-text {
-  margin-bottom: 42px;
+  /* margin-bottom: 42px; */
+  margin-bottom: 40px;
   font-size: 14px;
   line-height: calc(26 / 14);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.28px;
 }
 .about-btn {
   color: var(--title-color);
@@ -388,9 +407,10 @@ img {
 /*======== PRICES ========*/
 .prices {
   background-color: var(--prices-background);
-  background-image: url(../images/prices-bg.png);
-  max-width: 1600px;
-  margin: 0 auto;
+  background-image: url(../images/mobil-prices-bg.png);
+  /* max-width: 1600px; */
+  max-width: 480px;
+  /* margin: 0 auto; */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -401,20 +421,29 @@ img {
   color: var(--grey-trasp);
 }
 .prices-title {
+  font-size: 40px;
+  line-height: calc(47 / 40);
+  letter-spacing: 2px;
   margin-bottom: 44px;
   color: var(--total-white);
 }
 .services-prices {
-  display: flex;
-  gap: 30px;
+  /* display: flex;
+  gap: 30px; */
+  padding: 30px 20px 30px 40px;
   margin-bottom: 44px;
+  background-image: linear-gradient(
+    180deg,
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
+  );
 }
 
 .price-list {
-  width: calc((100% - 30px) / 2);
-  padding: 30px 20px;
+  /* width: calc((100% - 30px) / 2);
+  padding: 30px 20px; */
 }
-.price-list:first-child {
+/* .price-list:first-child {
   background-image: linear-gradient(
     180deg,
     #171a24 0%,
@@ -424,32 +453,42 @@ img {
 .price-list:last-child {
   background-image: linear-gradient(
     180deg,
-    #090b13 0%,
-    rgba(9, 11, 19, 0.2) 100%
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
   );
-}
+} */
 .price-item {
   display: flex;
-  gap: 12px;
+  /* gap: 12px; */
+  gap: 4px;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 20px;
 }
-.price-item:last-child {
+.price-list:last-child .price-item:last-child {
   margin-bottom: 0;
 }
+/* .price-item:last-child {
+  margin-bottom: 0;
+} */
 .price-item::before {
   content: "";
-  width: 100px;
+  /* width: 100px; */
   height: 1px;
   flex-grow: 1;
   background-color: var(--grey-transparency);
 }
 .price-text {
+  font-size: 14px;
+  line-height: calc(20 / 14);
+  letter-spacing: 0.28px;
   order: -1;
   color: var(--grey-text);
 }
 .price-price {
+  font-size: 14px;
+  line-height: calc(20 / 14);
+  letter-spacing: 0.28px;
   color: var(--grey-text);
 }
 .prices-btn {
@@ -457,7 +496,7 @@ img {
   color: var(--total-white);
   background: none;
 }
-
+/* ======= STOP ======== */
 /*======== WHY ========*/
 .why {
   background-color: var(--total-white);

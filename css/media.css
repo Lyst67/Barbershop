@@ -2,6 +2,27 @@
   .container {
     max-width: 450px;
   }
+  .hero {
+    background-image: var(--bg-gradient), url(../images/mobil-slider-img\ 3.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: var(--bg-gradient),
+        url(../images/mobil-slider-img\ 3\ -2x.jpg);
+    }
+  }
+  .prices {
+    background-image: url(../images/mobil-prices-bg.png);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .prices {
+      background-image: url(../images/mobil-prices-bg-2x.png);
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
