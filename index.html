@@ -45,13 +45,14 @@
             </li>
           </ul>
         </nav>
-        <a class="header-phone header-link" href="tel:+380441111111"
-          >+38 044 111 11 11</a
-        >
-        <button class="header-btn btn" data-modal-open type="button">
-          Online-booking
-        </button>
-
+        <dsv class="header-phone-thumb">
+          <a class="header-phone header-link" href="tel:+380441111111"
+            >+38 044 111 11 11</a
+          >
+          <button class="header-btn btn" data-modal-open type="button">
+            Online-booking
+          </button>
+        </dsv>
         <button class="menu-open-btn" type="button" data-menu-open>
           <svg class="burger-icon">
             <use href="./images/symbol-sprite.svg#burger-menu"></use>
@@ -71,7 +72,9 @@
                 <a class="menu-nav-link menu-link" href="#">About</a>
               </li>
               <li class="menu-nav-item">
-                <a class="menu-nav-link menu-link" href="#">Services and prices</a>
+                <a class="menu-nav-link menu-link" href="#"
+                  >Services and prices</a
+                >
               </li>
               <li class="menu-nav-item">
                 <a class="menu-nav-link menu-link" href="#">Barbers</a>
@@ -81,37 +84,33 @@
               </li>
             </ul>
           </nav>
-
-            <a class="mob-menu-phone menu-link" href="tel:+380441111111"
+          <a class="mob-menu-phone menu-link" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
-          <button class="mob-menu-btn btn" type="button">
-            Online-booking
-          </button>
-           
-           <ul class="modal-menu-socials">
-              <li class="menu-social-item">
-                <a
-                  class="modal-menu-social"
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  >Instagram</a
-                >
-              </li>
-              <li class="menu-social-item">
-                <a
-                  class="modal-menu-social"
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  >Youtube</a
-                >
-              </li> 
+          <button class="mob-menu-btn btn" type="button">Online-booking</button>
+          <ul class="modal-menu-socials">
+            <li class="menu-social-item">
+              <a
+                class="modal-menu-social"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Instagram</a
+              >
+            </li>
+            <li class="menu-social-item">
+              <a
+                class="modal-menu-social"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Youtube</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </header>
-
     <main>
       <section class="hero">
         <div class="container hero-container">
@@ -137,13 +136,15 @@
               </li>
             </ul>
           </div>
-          <div class="hero-content">
-            <p class="hero-suptitle suptitle">A hair salon for men in Kyiv</p>
-            <h1 class="hero-title">BarberShop</h1>
-            <p class="hero-slogan">
-              We are experts in trendy men’s haircuts. We work quickly,
-              carefully and with style.
-            </p>
+          <div class="right-side">
+            <div class="hero-content">
+              <p class="hero-suptitle suptitle">A hair salon for men in Kyiv</p>
+              <h1 class="hero-title">BarberShop</h1>
+              <p class="hero-slogan slogan">
+                We are experts in trendy men’s haircuts. We work quickly,
+                carefully and with style.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -151,29 +152,21 @@
         <div class="container about-container">
           <ul class="about-imgs">
             <li>
-              <img
-                src="./images/img1.jpg"
-                alt="barber soaps the neck"
-                width="270"
-                height="445"
-              />
+              <img src="./images/tab-about-1.jpg" alt="barber soaps the neck" />
             </li>
             <li>
               <img
-                src="./images/img2.jpg"
+                src="./images/tab-about-2.jpg"
                 alt="barber is shaving the back of head"
-                width="270"
-                height="445"
               />
             </li>
           </ul>
           <div class="about-content">
             <p class="about-suptitle suptitle">About</p>
             <h2 class="about-title title">Best Barbershop in your city</h2>
-
-            <p class="about-slogan">
-              If you want to add more confidence to your image, you should
-              definitely visit us.
+            <p class="about-slogan slogan">
+              If you want to add more confidence to your image, you should visit
+              us.
             </p>
             <p class="about-text">
               We are a team that never stops at what has been achieved and are
@@ -182,7 +175,6 @@
               always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
-
             <button class="about-btn btn" type="button">ONLINE-BOOKING</button>
           </div>
         </div>
@@ -237,6 +229,14 @@
       </section>
       <section class="why section">
         <div class="container why-container">
+          <div class="why-content">
+            <p class="why-suptitle suptitle">Old traditional school</p>
+            <h2 class="why-title title">¿Why people come to us?</h2>
+            <p class="why-slogan">
+              Only good things are said about us. But it's better to see and
+              feel 1 time than read 10 times.
+            </p>
+          </div>
           <ul class="why-list">
             <li class="why-item">
               <span class="count">600</span>
@@ -255,14 +255,6 @@
               <p class="why-text">Gifts for regular customers</p>
             </li>
           </ul>
-          <div class="why-content">
-            <p class="why-suptitle suptitle">Old traditional school</p>
-            <h2 class="why-title title">¿Why people come to us?</h2>
-            <p class="why-slogan">
-              Only good things are said about us. But it's better to see and
-              feel 1 time than read 10 times.
-            </p>
-          </div>
         </div>
       </section>
       <section class="barbers section">
@@ -274,10 +266,9 @@
           <ul class="barbers-list">
             <li class="barbers-item">
               <img
-                src="./images/imag1.jpg"
+                srcset="./images/mob-john-smith_2x.jpg"
+                src="./images/mob-john-smith.jpg"
                 alt="working barber"
-                width="370"
-                height="347"
               />
               <div class="barbers-info">
                 <h3 class="barbers-name">John Smith</h3>
@@ -316,10 +307,9 @@
             </li>
             <li class="barbers-item">
               <img
-                src="./images/imag2.jpg"
+                srcset="./images/mob-michele-doe_2x.jpg"
+                src="./images/mob-michele-doe.jpg"
                 alt="working barber"
-                width="370"
-                height="347"
               />
               <div class="barbers-info">
                 <h3 class="barbers-name">Michele Doe</h3>
@@ -358,10 +348,9 @@
             </li>
             <li class="barbers-item">
               <img
-                src="./images/imag3.jpg"
+                srcset="./images/mob-alan-black_2x.jpg"
+                src="./images/mob-alan-black.jpg"
                 alt="working barber"
-                width="370"
-                height="347"
               />
               <div class="barbers-info">
                 <h3 class="barbers-name">Alan Black</h3>
@@ -410,46 +399,64 @@
           <ul class="portfolio-list">
             <li>
               <img
-                src="./images/img25.jpg"
+                srcset="./images/mob-barber-works-1_2x.jpg"
+                src="./images/mob-barber-works-1.jpg"
                 alt="hairdresser cuts"
-                width="270"
-                height="360"
               />
             </li>
             <li>
               <img
-                src="./images/img26.jpg"
+                srcset="./images/mob-barber-works-2_2x.jpg"
+                src="./images/mob-barber-works-2.jpg"
                 alt="barber shaves"
-                width="270"
-                height="360"
               />
             </li>
             <li>
               <img
-                src="./images/img27.jpg"
+                srcset="./images/mob-barber-works-3_2x.jpg"
+                src="./images/mob-barber-works-3.jpg"
                 alt="barber makes a mask"
-                width="270"
-                height="360"
               />
             </li>
             <li>
               <img
-                src="./images/img28.jpg"
+                srcset="./images/mob-barber-works-4_2x.jpg"
+                src="./images/mob-barber-works-4.jpg"
                 alt="barber is shaving the back of head"
-                width="270"
-                height="360"
               />
             </li>
           </ul>
         </div>
       </section>
       <div class="online-contact">
-        <div class="container">
-          <section class="booking">
+        <section class="booking section">
+          <div class="boocing-container container">
             <h2 class="booking-title title">Online-booking</h2>
-            <button class="booking-btn btn" type="button">send</button>
-          </section>
-          <section class="contacts">
+            <form class="booking-form">
+              <label class="booking-form-label">
+                <span class="form-label-title">Name*</span>
+                <input
+                  type="text"
+                  name="user-name"
+                  class="form-input"
+                  required
+                />
+              </label>
+              <label class="booking-form-label">
+                <span class="form-label-title">Phone*</span>
+                <input type="tel" name="user-tel" class="form-input" required />
+              </label>
+              <label class="booking-form-label">
+                <span class="form-label-title">Message</span>
+                <textarea type="message" class="form-input textarea-input">
+                </textarea>
+              </label>
+              <button class="booking-btn btn" type="submit">send</button>
+            </form>
+          </div>
+        </section>
+        <section class="contacts section">
+          <div class="container">
             <h2 class="contacts-title title">Contacts</h2>
             <address class="contacts-address">
               <ul class="contacts-list">
@@ -457,8 +464,7 @@
                   <a
                     class="address-link contact-link"
                     href="https://goo.gl/maps/sMC7R1vdvCnkaeTi8"
-                    >st. Vasilkivska, 7A <br />
-                    Kyiv, 08132</a
+                    >st. Vasilkovaya, 7A Kiev, 08132</a
                   >
                 </li>
                 <li class="contacts-item">
@@ -477,10 +483,11 @@
             </address>
             <h3 class="contacts-suptitle suptitle">Working hours</h3>
             <p class="schedule">Every day from 9:00 to 22:00</p>
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
     </main>
+
     <footer class="footer">
       <div class="container footer-container">
         <p class="copy">&copy; Copyright 2020</p>
@@ -506,6 +513,7 @@
         </ul>
       </div>
     </footer>
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button data-modal-close class="modal-close-btn" type="button">
