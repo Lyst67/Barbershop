@@ -1,6 +1,6 @@
 @media screen and (min-width: 480px) {
   .container {
-    max-width: 480px;
+    max-width: 448px;
   }
   .hero {
     background-image: var(--bg-gradient), url(../images/mobil-slider-img\ 3.jpg);
@@ -28,6 +28,10 @@
 @media screen and (min-width: 768px) {
   .container {
     max-width: 720px;
+  }
+  .section {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   .header {
     top: 32px;
@@ -143,10 +147,273 @@
   .about-text {
     margin-bottom: 77px;
   }
+  .prices {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url(../images/tab-prices-bg.png);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .prices {
+      background-image: url(../images/tab-prices-bg-2x.png);
+    }
+  }
+  .prices-title {
+    font-size: 42px;
+    letter-spacing: 2.1px;
+  }
+  .services-prices {
+    padding: 32px 40px;
+  }
+  .price-text,
+  .price-price {
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    letter-spacing: 0.36px;
+  }
+  .why-title {
+    width: 448px;
+  }
+  .why-slogan {
+    max-width: 500px;
+  }
+  .why-list {
+    width: 450px;
+    margin-left: auto;
+  }
+  .why-box {
+    width: 210px;
+  }
+  .why-item {
+    padding: 20px 44px;
+  }
+  .barbers-container {
+    padding-left: 135px;
+    padding-right: 135px;
+  }
+  .barbers-item {
+    width: 450px;
+  }
+  .portfolio-suptitle {
+    margin-bottom: 44px;
+  }
+  .portfolio-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .portfolio-list li {
+    width: calc((100% - 30px) / 2);
+  }
+  .portfolio-list li:first-child + li {
+    order: unset;
+  }
+  .booking-title {
+    text-align: unset;
+  }
+  .boocing-input {
+    width: 326px;
+  }
+  .boocing-input:first-child {
+    margin-right: 30px;
+  }
+  .booking-btn {
+    margin-left: 0;
+  }
+  .contacts {
+    background-image: url(../images/tab-contact-bg.png);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .contacts {
+      background-image: url(../images/tab-contact-bg_2x.png);
+    }
+  }
+  .contacts-title {
+    text-align: unset;
+  }
+  .contacts-info {
+    display: flex;
+    gap: 30px;
+  }
+  .contacts-address {
+    width: 290px;
+  }
+  .contacts-item:first-child {
+    width: 240px;
+  }
+  .mail-link {
+    margin-bottom: 0;
+  }
+  .footer {
+    padding-bottom: 0;
+  }
+  .footer-container {
+    align-items: center;
+  }
+  .copy {
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
+  }
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .logo {
+    margin-right: 130px;
+  }
+  .nav-list {
+    gap: 30px;
+  }
+  .header-phone-thumb {
+    position: unset;
+    display: flex;
+    gap: 44px;
+    align-items: center;
+    margin-left: auto;
+  }
+  .header-phone {
+    position: unset;
+    margin-left: 0;
+  }
+  .left-side {
+    width: 100px;
+    padding-left: 27px;
+  }
+  .hero-content {
+    width: 444px;
+    padding-left: 100px;
+  }
+  .hero-title {
+    font-size: 72px;
+    line-height: normal;
+    letter-spacing: 3.6px;
+  }
+  .about-imgs {
+    display: flex;
+    flex-direction: row;
+    width: 570px;
+  }
+  .about-imgs li {
+    width: calc((100% - 30px) / 2);
+  }
+  .about-content {
+    width: 470px;
+  }
+  .about-title {
+    width: 470px;
+    font-size: 42px;
+    line-height: normal;
+    letter-spacing: 2.1px;
+  }
+  .about-text {
+    margin-bottom: 42px;
+  }
+  .prices {
+    background-image: url(../images/desk-prices-bg.png);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .prices {
+      background-image: url(../images/desk-prices-bg_2x.png);
+    }
+  }
+  .services-prices {
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    background: none;
+  }
+  .price-list {
+    width: calc((100% - 30px) / 2);
+    padding: 30px 20px;
+  }
+  .price-list:first-child {
+    background-image: var(--prices-gradient);
+  }
+  .price-list:last-child {
+    background-image: var(--prices-gradient-2);
+  }
+  .why-container {
+    display: flex;
+    padding-left: 85px;
+    padding-right: 115px;
+    gap: 130px;
+  }
+  .why-suptitle {
+    margin-top: 9px;
+  }
+  .why-list {
+    order: -1;
+    width: 370px;
+    margin: 0;
+  }
+  .why-box {
+    width: 170px;
+  }
+  .why-item {
+    padding: 20px 24px;
+  }
+  .barbers-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .barbers-list {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .barbers-item {
+    width: calc((100% - 60px) / 3);
+  }
+  .portfolio-list li {
+    width: calc((100% - 90px) / 4);
+  }
+  .online-contact {
+    display: flex;
+  }
+  .booking {
+    padding-top: 130px;
+    padding-bottom: 111px;
+    width: calc(50% + 15px);
+  }
+  .contacts {
+    width: calc(50% - 15px);
+    padding-top: 130px;
+    padding-bottom: 111px;
+    background-image: url(../images/desk-contact-bg.png);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .prices {
+      background-image: url(../images/desk-contact-bg_2x.png);
+    }
+  }
+  .boocing-container {
+    max-width: 615px;
+    margin-right: 0;
+  }
+  .contacts-container {
+    max-width: 585px;
+    margin-left: 0;
+    padding-left: 105px;
+  }
+  .boocing-input {
+    width: 270px;
+  }
+  .booking-btn {
+    margin-bottom: 72px;
+  }
+  .contacts-info {
+    flex-direction: column;
+    gap: 70px;
   }
 }

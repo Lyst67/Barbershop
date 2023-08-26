@@ -13,9 +13,14 @@
   --total-white: #ffffff;
   --grey-transparency: #9da4bd1f;
   --backdrop-backgroung: #171a246e;
-  --backdrop-background: #191c2633;
+  --modal-backdrop-background: #191c2633;
+  --prices-gradient: linear-gradient(180deg, #171a24 0%, #171a2433 100%);
+  --prices-gradient-2: linear-gradient(180deg, #090b13 0%, #171a2433 100%);
   --bg-gradient: linear-gradient(#191c2633, #191c2633);
+  /* ------------- smooth scrolling on the anchor --------------- */
+  scroll-behavior: smooth;
 }
+
 /*======== GENERAL ========*/
 body {
   font-family: "Open Sans", sans-serif;
@@ -55,8 +60,6 @@ img {
   overflow: hidden;
 }
 .section {
-  /* padding-top: 120px;
-  padding-bottom: 120px; */
   padding-top: 84px;
   padding-bottom: 84px;
 }
@@ -103,6 +106,7 @@ img {
   font-weight: 600;
   font-size: 11px;
   line-height: normal;
+  letter-spacing: normal;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -151,7 +155,7 @@ img {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--backdrop-background);
+  background-color: var(--modal-backdrop-background);
   transition: opacity 300ms linear, visibility 300ms linear;
 }
 .mob-menu-backdrop.is-hidden {
@@ -254,7 +258,6 @@ img {
 }
 
 /*======== HEADER ========*/
-
 .header {
   position: absolute;
   width: 100%;
@@ -265,9 +268,7 @@ img {
   justify-content: space-between;
   align-items: center;
 }
-/* .logo {
-    margin-right: 130px;
-  } */
+
 .logo-icon {
   display: block;
   fill: var(--total-white);
@@ -279,16 +280,7 @@ img {
   display: none;
 }
 
-/* .nav-list {
-  gap: 30px;
-}
-.header-phone {
-  margin-left: auto;
-  margin-right: 44px;
-}
-
 /*======== HERO ========*/
-
 .hero {
   background-image: var(--bg-gradient), url(../images/mobil-slider-img\ 3.jpg);
   background-repeat: no-repeat;
@@ -300,23 +292,18 @@ img {
   display: flex;
 }
 .left-side {
-  /* width: 100px;
-  padding-left: 27px; */
   display: none;
 }
 .hero-content {
   width: 320px;
   padding-top: 208px;
   padding-bottom: 208px;
-  /* padding: 272px 100px 208px 100px; */
 }
 .hero-suptitle {
   margin-bottom: 20px;
   color: var(--grey-trasp);
 }
 .hero-title {
-  /* font-size: 72px;
-  line-height: calc(85 / 72); */
   margin-bottom: 20px;
   font-size: 48px;
   line-height: calc(56 / 48);
@@ -366,19 +353,16 @@ img {
   background: none;
 }
 
-/* ======= STOP ======== */
 /*======== PRICES ========*/
 .prices {
   background-color: var(--prices-background);
   background-image: url(../images/mobil-prices-bg.png);
-  /* max-width: 1600px; */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .prices-suptitle {
   margin-bottom: 20px;
-  letter-spacing: normal;
   color: var(--grey-trasp);
 }
 .prices-title {
@@ -388,35 +372,11 @@ img {
   color: var(--total-white);
 }
 .services-prices {
-  /* display: flex;
-  gap: 30px; */
   padding: 30px 20px 30px 40px;
   margin-bottom: 44px;
-  background-image: linear-gradient(
-    180deg,
-    #171a24 0%,
-    rgba(23, 26, 36, 0.2) 100%
-  );
+  background: var(--prices-gradient);
 }
 
-.price-list {
-  /* width: calc((100% - 30px) / 2);
-  padding: 30px 20px; */
-}
-/* .price-list:first-child {
-  background-image: linear-gradient(
-    180deg,
-    #171a24 0%,
-    rgba(23, 26, 36, 0.2) 100%
-  );
-}
-.price-list:last-child {
-  background-image: linear-gradient(
-    180deg,
-    #171a24 0%,
-    rgba(23, 26, 36, 0.2) 100%
-  );
-} */
 .price-item {
   display: flex;
   /* gap: 12px; */
@@ -456,25 +416,17 @@ img {
   color: var(--total-white);
   background: none;
 }
+
 /*======== WHY ========*/
 .why {
   background-color: var(--total-white);
 }
-.why-container {
-  /* display: flex; */
-  /* padding-left: 85px;
-  padding-right: 115px;
-  gap: 130px; */
-}
 .why-suptitle {
-  /* margin-top: 9px; */
   margin-bottom: 20px;
   color: var(--title-color);
   letter-spacing: normal;
 }
 .why-title {
-  /* min-width: 418px; */
-  /* max-width: 430px; */
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 20px;
@@ -490,30 +442,35 @@ img {
 }
 .why-list {
   display: flex;
-  flex-wrap: wrap;
-  /* width: 370px; */
+  gap: 30px;
   max-width: 418px;
+  /* width: 370px; */
+}
+.why-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 194px;
+}
+.why-box:last-child {
+  margin-top: 35px;
 }
 .why-item {
-  /* width: 170px; */
-  max-width: 193px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
   height: 133px;
-  /* padding: 20px 24px; */
-  padding: 20px 35px;
+  padding: 20px 36px;
   text-align: center;
   background-color: var(--cont-background);
-}
-.why-item:nth-child(even) {
-  /* margin-top: 35px; */
-  margin-top: 30px;
-  margin-left: 30px;
 }
 .count {
   font-weight: 700;
   font-size: 42px;
   line-height: calc(57 / 42);
   text-align: center;
-  letter-spacing: 0.05em;
+  letter-spacing: 2.1px;
   color: var(--title-color);
 }
 .count::after {
@@ -525,8 +482,7 @@ img {
   color: transparent;
   text-shadow: 0 8px 0 var(--accent);
 }
-.count + p {
-  padding-top: 6px;
+.why-text {
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -541,7 +497,6 @@ img {
 .barbers-suptitle {
   margin-bottom: 20px;
   color: var(--title-color);
-  letter-spacing: normal;
 }
 .barbers-title {
   margin-bottom: 44px;
@@ -551,13 +506,10 @@ img {
   display: flex;
   flex-direction: column;
   gap: 64px;
-  /* gap: 30px; */
-}
-.barbers-item {
-  /* flex-basis: calc((100% - 60px) / 3); */
+  align-items: center;
 }
 .barbers-info {
-  padding-top: 30px;
+  margin-top: 30px;
 }
 .barbers-name {
   margin-bottom: 8px;
@@ -609,7 +561,6 @@ img {
   background-color: var(--total-white);
 }
 .portfolio-suptitle {
-  /* margin-bottom: 44px; */
   margin-bottom: 70px;
   color: var(--title-color);
   letter-spacing: normal;
@@ -619,37 +570,25 @@ img {
   flex-direction: column;
   gap: 30px;
 }
-.portfolio-list li {
-  /* width: calc((100% - 90px) / 4); */
+.portfolio-list li:first-child + li {
+  order: -1;
 }
 
 /*======== ONLINE-CONTACT ========*/
-
 .online-contact {
   background-color: var(--dark-background);
-  /* max-width: 1600px; */
   margin: 0 auto;
-  /* background-image: url(../images/contacts-bg.png);
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: calc(50% - 15px); */
 }
 
 /*======== BOOKING ========*/
-.booking {
-  /* padding-top: 130px;
-  padding-bottom: 183px;
-  width: calc(50% + 15px);
-  padding-right: 25px; */
-}
-
 .booking-title {
   text-align: center;
   margin-bottom: 44px;
   color: var(--total-white);
 }
 .booking-form-label {
-  display: block;
+  width: 100%;
+  display: inline-block;
   position: relative;
   color: var(--grey-text-info);
   font-size: 11px;
@@ -671,7 +610,7 @@ img {
   content: "";
   margin-left: auto;
   margin-right: auto;
-  max-width: 418px;
+  max-width: 100%;
   height: 1px;
   background-color: var(--grey-text-info);
 }
@@ -680,12 +619,9 @@ img {
 }
 .form-input {
   display: block;
-  width: 418px;
+  width: 100%;
   height: 24px;
   padding-left: 56px;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: 1.1px;
   color: var(--total-white);
   background-color: transparent;
   border: none;
@@ -707,10 +643,6 @@ img {
   background-image: url("../images/contacts-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  /* width: calc(50% - 15px); */
-  /* padding-top: 130px;
-  padding-bottom: 120px;
-  padding-left: 105px; */
 }
 .contacts-title {
   text-align: center;
@@ -721,10 +653,7 @@ img {
   font-style: normal;
 }
 .address-link {
-  font-size: 18px;
   font-weight: 700;
-  line-height: calc(30 / 18);
-  letter-spacing: 0.36px;
   margin-bottom: 20px;
   color: var(--grey-text);
 }
@@ -756,6 +685,9 @@ img {
   display: flex;
   gap: 16px;
   align-items: center;
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.36px;
   transition: color 300ms linear;
 }
 .contact-link:is(:hover, :focus) {
@@ -769,6 +701,9 @@ img {
   background-color: var(--grey-text-info);
 }
 .schedule {
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.36px;
   color: var(--grey-text);
 }
 
@@ -779,8 +714,6 @@ img {
 }
 .footer-container {
   display: flex;
-
-  /* align-items: center; */
 }
 .copy {
   font-weight: 600;
@@ -806,8 +739,6 @@ img {
 .footer-link {
   padding-top: 44px;
   padding-bottom: 44px;
-  /* padding-top: 56px;
-  padding-bottom: 56px; */
 }
 
 /*======== MODAL ========*/
