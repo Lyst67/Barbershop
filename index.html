@@ -51,21 +51,21 @@
           <a class="header-phone header-link" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
-          <button class="header-btn btn" data-modal-open type="button">
+          <button class="header-btn btn js-modal-open" type="button">
             Online-booking
           </button>
         </div>
         <!-- --------- BURGER -------- -->
-        <button class="menu-open-btn" type="button" data-menu-open>
+        <button class="menu-open-btn js-menu-open" type="button">
           <svg class="burger-icon">
             <use href="./images/symbol-sprite.svg#burger-menu"></use>
           </svg>
         </button>
       </div>
       <!-- ----------- MOB-MENU ----------- -->
-      <div class="mob-menu-backdrop is-hidden" data-menu>
+      <div class="mob-menu-backdrop js-mob-menu is-hidden">
         <div class="mobil-menu">
-          <button class="menu-close-btn" type="button" data-menu-close>
+          <button class="menu-close-btn js-menu-close" type="button">
             <svg class="menu-close-icon">
               <use href="./images/symbol-sprite.svg#modal-menu-close"></use>
             </svg>
@@ -91,7 +91,9 @@
           <a class="mob-menu-phone menu-link" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
-          <button class="mob-menu-btn btn" type="button">Online-booking</button>
+          <button class="mob-menu-btn btn js-modal-open" type="button">
+            Online-booking
+          </button>
           <ul class="modal-menu-socials">
             <li class="menu-social-item">
               <a
@@ -213,7 +215,9 @@
               always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
-            <button class="about-btn btn" type="button">ONLINE-BOOKING</button>
+            <button class="about-btn btn js-modal-open" type="button">
+              ONLINE-BOOKING
+            </button>
           </div>
         </div>
       </section>
@@ -262,7 +266,9 @@
             </ul>
           </div>
 
-          <button class="prices-btn btn" type="button">online-booking</button>
+          <button class="prices-btn btn js-modal-open" type="button">
+            online-booking
+          </button>
         </div>
       </section>
       <section class="why section">
@@ -738,11 +744,9 @@
       </div>
     </footer>
     <!-- ---------- MODAL ----------- -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden js-modal">
       <div class="modal">
-        <button data-modal-close class="modal-close-btn" type="button">
-          X
-        </button>
+        <button class="modal-close-btn js-modal-close" type="button">X</button>
         <p class="modal-title">ONLINE BOOKING</p>
         <form class="modal-form">
           <label class="modal-label">

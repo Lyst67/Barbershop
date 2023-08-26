@@ -3,24 +3,25 @@
     max-width: 448px;
   }
   .hero {
-    background-image: var(--bg-gradient), url(../images/mobil-slider-img\ 3.jpg);
+    background-image: var(--bg-gradient),
+      url("../images/mobil-slider-img\ 3.jpg");
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .hero {
       background-image: var(--bg-gradient),
-        url(../images/mobil-slider-img\ 3\ -2x.jpg);
+        url("../images/mobil-slider-img\ 3\ -2x.jpg");
     }
   }
   .prices {
-    background-image: url(../images/mobil-prices-bg.png);
+    background-image: url("../images/mobil-prices-bg.png");
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .prices {
-      background-image: url(../images/mobil-prices-bg-2x.png);
+      background-image: url("../images/mobil-prices-bg-2x.png");
     }
   }
 }
@@ -106,7 +107,7 @@
   .right-side {
     width: 100%;
     height: 680px;
-    background-image: var(--bg-gradient), url(../images/tab-slide-1.webp);
+    background-image: var(--bg-gradient), url("../images/tab-slide-1.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -150,13 +151,13 @@
   .prices {
     padding-top: 100px;
     padding-bottom: 100px;
-    background-image: url(../images/tab-prices-bg.png);
+    background-image: url("../images/tab-prices-bg.png");
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .prices {
-      background-image: url(../images/tab-prices-bg-2x.png);
+      background-image: url("../images/tab-prices-bg-2x.png");
     }
   }
   .prices-title {
@@ -221,13 +222,13 @@
     margin-left: 0;
   }
   .contacts {
-    background-image: url(../images/tab-contact-bg.png);
+    background-image: url("../images/tab-contact-bg.png");
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .contacts {
-      background-image: url(../images/tab-contact-bg_2x.png);
+      background-image: url("../images/tab-contact-bg_2x.png");
     }
   }
   .contacts-title {
@@ -254,6 +255,9 @@
   }
   .copy {
     margin-top: 0;
+  }
+  .modal {
+    width: 440px;
   }
 }
 
@@ -316,13 +320,13 @@
     margin-bottom: 42px;
   }
   .prices {
-    background-image: url(../images/desk-prices-bg.png);
+    background-image: url("../images/desk-prices-bg.png");
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .prices {
-      background-image: url(../images/desk-prices-bg_2x.png);
+      background-image: url("../images/desk-prices-bg_2x.png");
     }
   }
   .services-prices {
@@ -388,13 +392,13 @@
     width: calc(50% - 15px);
     padding-top: 130px;
     padding-bottom: 111px;
-    background-image: url(../images/desk-contact-bg.png);
+    background-image: url("../images/desk-contact-bg.png");
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .prices {
-      background-image: url(../images/desk-contact-bg_2x.png);
+      background-image: url("../images/desk-contact-bg_2x.png");
     }
   }
   .boocing-container {
@@ -415,5 +419,8 @@
   .contacts-info {
     flex-direction: column;
     gap: 70px;
+  }
+  .modal {
+    width: 500px;
   }
 }

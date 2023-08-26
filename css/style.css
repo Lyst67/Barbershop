@@ -26,6 +26,9 @@ body {
   font-family: "Open Sans", sans-serif;
   color: var(--main-text);
 }
+.no-scroll {
+  overflow: hidden;
+}
 p,
 h1,
 h2,
@@ -69,7 +72,6 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid crimson;
 }
 .btn {
   display: block;
@@ -87,7 +89,6 @@ img {
   cursor: pointer;
   transition: color 300ms linear, background-color 300ms linear;
 }
-
 .btn:is(:hover, :focus) {
   color: var(--total-white);
   background-color: var(--accent);
@@ -130,8 +131,7 @@ img {
   color: var(--accent);
 }
 
-/* ======= Mobil-Modal-Window =======  */
-
+/* ======= MOB-MENU =======  */
 .menu-open-btn {
   padding: 0;
   background-color: transparent;
@@ -282,7 +282,7 @@ img {
 
 /*======== HERO ========*/
 .hero {
-  background-image: var(--bg-gradient), url(../images/mobil-slider-img\ 3.jpg);
+  background-image: var(--bg-gradient), url("../images/mobil-slider-img\ 3.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -322,10 +322,6 @@ img {
 .about-imgs {
   display: none;
 }
-.about-content {
-  /* padding-left: 30px;
-  padding-right: 100px; */
-}
 .about-suptitle {
   margin-bottom: 20px;
   color: var(--title-color);
@@ -342,7 +338,6 @@ img {
   margin-bottom: 20px;
 }
 .about-text {
-  /* margin-bottom: 42px; */
   margin-bottom: 40px;
   font-size: 14px;
   line-height: calc(26 / 14);
@@ -356,7 +351,7 @@ img {
 /*======== PRICES ========*/
 .prices {
   background-color: var(--prices-background);
-  background-image: url(../images/mobil-prices-bg.png);
+  background-image: url("../images/mobil-prices-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -372,14 +367,13 @@ img {
   color: var(--total-white);
 }
 .services-prices {
-  padding: 30px 20px 30px 40px;
+  padding: 30px 20px;
   margin-bottom: 44px;
   background: var(--prices-gradient);
 }
 
 .price-item {
   display: flex;
-  /* gap: 12px; */
   gap: 4px;
   justify-content: space-between;
   align-items: baseline;
@@ -388,12 +382,8 @@ img {
 .price-list:last-child .price-item:last-child {
   margin-bottom: 0;
 }
-/* .price-item:last-child {
-  margin-bottom: 0;
-} */
 .price-item::before {
   content: "";
-  /* width: 100px; */
   height: 1px;
   flex-grow: 1;
   background-color: var(--grey-transparency);
@@ -438,13 +428,11 @@ img {
   letter-spacing: 0.36px;
   margin-bottom: 44px;
   max-width: 418px;
-  /* max-width: 500px; */
 }
 .why-list {
   display: flex;
   gap: 30px;
   max-width: 418px;
-  /* width: 370px; */
 }
 .why-box {
   display: flex;
@@ -667,7 +655,7 @@ img {
   color: var(--grey-text);
 }
 .phone-link::before {
-  content: url(../images/phone.svg);
+  content: url("../images/phone.svg");
   width: 24px;
   height: 24px;
 }
@@ -752,6 +740,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: var(--backdrop-backgroung);
+  transition: opacity 300ms linear, visibility 300ms linear;
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -762,12 +751,16 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
+  width: 370px;
   height: 600px;
   padding: 20px;
   border-radius: 8px;
   background-color: #fff;
+  transform: translate(-50%, -50%) scale(1) rotate(0);
+  transition: transform 300ms linear;
+}
+.backdrop.is-hidden .modal {
+  transform: scale(0.5) translate(-100%, -100%) rotate(0.5turn);
 }
 .modal-close-btn {
   display: block;
@@ -852,7 +845,7 @@ img {
   justify-content: space-around;
   align-items: center;
   margin-bottom: 48px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .checkbox-title {
   font-size: 14px;
