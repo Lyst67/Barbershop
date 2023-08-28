@@ -18,6 +18,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/media.css" />
   </head>
@@ -144,6 +148,7 @@
             </ul>
           </div>
           <div class="right-side">
+            <!-- <div class="overlay"></div> -->
             <div class="hero-content">
               <p class="hero-suptitle suptitle">A hair salon for men in Kyiv</p>
               <h1 class="hero-title">BarberShop</h1>
@@ -151,6 +156,67 @@
                 We are experts in trendy men’s haircuts. We work quickly,
                 carefully and with style.
               </p>
+            </div>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <picture>
+                    <source
+                      srcset="./images/swiper/desk-slide-1.webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/swiper/tab-slide-1.webp"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="./images/swiper/mob-slide-1.webp"
+                      alt="shaving the client"
+                      class="slider-img"
+                    />
+                    <div class="overlay"></div>
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture>
+                    <source
+                      srcset="./images/swiper/desk-slide-2.webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/swiper/tab-slide-2.webp"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="./images/swiper/mob--slide-2.webp"
+                      alt="barber supplies"
+                      class="slider-img"
+                    />
+                    <div class="overlay"></div>
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture>
+                    <source
+                      srcset="./images/swiper/desk-slide-3.webp"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/swiper/tab-slide-3.webp"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      src="./images/swiper/mob-slide-3.webp"
+                      alt="hair styling"
+                      class="slider-img"
+                    />
+                    <div class="overlay"></div>
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
           </div>
         </div>
@@ -835,5 +901,6 @@
     </div>
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
+    <script type="module" src="./js/swiper.js"></script>
   </body>
 </html>

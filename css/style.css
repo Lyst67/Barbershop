@@ -262,6 +262,7 @@ img {
   position: absolute;
   width: 100%;
   top: 40px;
+  z-index: 1;
 }
 .header-container {
   display: flex;
@@ -281,12 +282,31 @@ img {
 }
 
 /*======== HERO ========*/
-.hero {
-  background-image: var(--bg-gradient), url("../images/mobil-slider-img\ 3.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  flex-grow: 1;
+/*======== HERO-SLIDER ========*/
+.right-side {
+  position: relative;
+  margin-left: -31px;
+  margin-right: -31px;
+  overflow: hidden;
+}
+.swiper {
+  max-width: 480px;
+  z-index: 0;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--hero-background);
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.swiper-button-next {
+  display: none;
+}
+.swiper-button-prev {
+  display: none;
 }
 .hero-container {
   display: flex;
@@ -295,9 +315,11 @@ img {
   display: none;
 }
 .hero-content {
-  width: 320px;
-  padding-top: 208px;
-  padding-bottom: 208px;
+  position: absolute;
+  max-width: 320px;
+  top: 208px;
+  margin-left: 31px;
+  z-index: 1;
 }
 .hero-suptitle {
   margin-bottom: 20px;
