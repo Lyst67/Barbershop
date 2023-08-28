@@ -99,6 +99,37 @@
   .swiper {
     min-width: 573px;
   }
+  .swiper-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.1px;
+    color: var(--grey-trasp);
+    top: 616px;
+    z-index: 50;
+    transition: color 300ms linear;
+  }
+  .swiper-btn::after {
+    display: block;
+    content: "";
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
+  }
+  .custom-prev {
+    right: 104px;
+  }
+  .custom-next {
+    right: 20px;
+    align-items: flex-end;
+  }
+  .swiper-btn:is(:hover, :focus) {
+    color: var(--total-white);
+  }
   .hero-content {
     width: 360px;
     top: 272px;

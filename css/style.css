@@ -151,6 +151,7 @@ img {
 
 .mob-menu-backdrop {
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 100vw;
@@ -165,6 +166,7 @@ img {
 }
 .mobil-menu {
   position: absolute;
+  z-index: 2;
   top: 0;
   right: 0;
   max-width: 337px;
@@ -285,6 +287,7 @@ img {
 /*======== HERO-SLIDER ========*/
 .right-side {
   position: relative;
+  opacity: 0.99;
   margin-left: -31px;
   margin-right: -31px;
   overflow: hidden;
@@ -300,12 +303,9 @@ img {
   background-color: var(--hero-background);
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: 0;
 }
-.swiper-button-next {
-  display: none;
-}
-.swiper-button-prev {
+.swiper-btn {
   display: none;
 }
 .hero-container {
@@ -758,6 +758,7 @@ img {
 }
 .backdrop {
   position: fixed;
+  z-index: 2;
   top: 0;
   width: 100%;
   height: 100%;
