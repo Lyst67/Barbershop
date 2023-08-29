@@ -308,6 +308,9 @@ img {
 .swiper-btn {
   display: none;
 }
+.swiper-block {
+  display: none;
+}
 .hero-container {
   display: flex;
 }
@@ -715,6 +718,16 @@ img {
   line-height: calc(30 / 18);
   letter-spacing: 0.36px;
   color: var(--grey-text);
+}
+.arrow-up-icon {
+  display: block;
+  fill: var(--grey-text);
+  background-color: transparent;
+  margin-left: auto;
+  transition: fill 300ms linear;
+}
+.arrow-up-icon:is(:hover, :focus) {
+  fill: var(--accent);
 }
 
 /*======== FOOTER ========*/
