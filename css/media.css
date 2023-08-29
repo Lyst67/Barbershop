@@ -99,6 +99,27 @@
   .swiper {
     min-width: 573px;
   }
+  .swiper-container .swiper-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    position: absolute;
+    top: 325px;
+    left: 519px;
+    max-width: 18px;
+    height: 34px;
+  }
+  .swiper-block .swiper-pagination-bullet {
+    width: 8px;
+    height: 2px;
+    border-radius: 0;
+    background-color: var(--grey-text);
+  }
+  .swiper-block .swiper-pagination-bullet-active {
+    background-color: var(--total-white);
+    width: 18px;
+  }
   .swiper-btn {
     display: flex;
     flex-direction: column;
@@ -110,7 +131,7 @@
     letter-spacing: 1.1px;
     color: var(--grey-trasp);
     top: 616px;
-    z-index: 50;
+    z-index: 1;
     transition: color 300ms linear;
   }
   .swiper-btn::after {
@@ -310,6 +331,9 @@
   }
   .swiper {
     min-width: 1070px;
+  }
+  .swiper-container .swiper-block {
+    left: 1032px;
   }
   .hero-content {
     width: 444px;

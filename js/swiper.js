@@ -6,6 +6,10 @@ const swiper = new Swiper(".swiper", {
     nextEl: ".custom-next",
     prevEl: ".custom-prev",
   },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+  },
   loop: true,
   autoplay: {
     delay: 3000,
