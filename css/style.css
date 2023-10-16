@@ -456,7 +456,8 @@ img {
 }
 .why-list {
   display: flex;
-  gap: 30px;
+  max-width: 418px;
+  justify-content: space-between;
   max-width: 418px;
 }
 .why-box {
@@ -749,7 +750,8 @@ img {
 }
 .footer-social {
   display: flex;
-  gap: 40px;
+  width: 270px;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: auto;
 }
